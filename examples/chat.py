@@ -19,7 +19,7 @@ def main():
     # Run `. setp.sh` to set the below testing environment variables
 
     host_id = 'stackexchange.com'
-    room_id = '1'  # Sandbox
+    room_id = '136338'  # Testing
 
     if 'ChatExchangeU' in os.environ:
         email = os.environ['ChatExchangeU']
