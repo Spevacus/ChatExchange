@@ -41,7 +41,9 @@ def main():
     while True:
         message = input("<< ")
         room.send_message(message)
-
+        nmsg = client.get_message(client.get_user(430906).last_message)
+        nmsg.delete()
+        
     client.logout()
 
 
