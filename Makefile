@@ -3,13 +3,13 @@ default: test run-example
 WARGS = -W default::Warning
 
 run-example: install-dependencies PHONY
-	python $(WARGS) examples/chat.py
+	python3 $(WARGS) examples/chat.py
 
 run-web-example: install-dependencies PHONY
-	python $(WARGS) examples/web_viewer.py
+	python3 $(WARGS) examples/web_viewer.py
 
 test: install-dependencies PHONY
-	python $(WARGS) -m pytest
+	python3 $(WARGS) -m pytest
 
 test-coverage: install-dependencies PHONY
 	python -m coverage run --branch -m pytest
