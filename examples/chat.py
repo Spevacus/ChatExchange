@@ -38,12 +38,10 @@ def main():
     room.watch(on_message)
 
     print("(You are now in room #%s on %s.)" % (room_id, host_id))
+    print(client.get_me().name)
     while True:
         message = input("<< ")
         room.send_message(message)
-        nuser = client.get_user(430906)
-        print(nuser.name)
-        print(nuser.last_message)
         
     client.logout()
 
