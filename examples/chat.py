@@ -42,7 +42,7 @@ def main():
         message = input("<< ")
         room.send_message(message)
         nuser = client.get_user(430906)
-        print(nuser.user_id)
+        print(nuser.name)
         print(nuser.last_message)
         
     client.logout()
