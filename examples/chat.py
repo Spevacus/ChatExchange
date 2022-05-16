@@ -58,7 +58,7 @@ def on_message(message, client):
         message.message.reply(str(random.random()))
     if message.content.startswith('deleteme'):
         print("Deleting message: deleteme")
-        message.delete()
+        message.message.delete()
 
 
 def setup_logging():
