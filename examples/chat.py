@@ -36,9 +36,7 @@ def main():
     room = client.get_room(room_id)
     room.join()
     room.watch(on_message)
-
-    print("(You are now in room #%s on %s.)" % (room_id, host_id))
-    print(client.get_me().name)
+    
     while True:
         message = input("<< ")
         room.send_message(message)
@@ -58,6 +56,9 @@ def on_message(message, client):
         print(message)
         print("Spawning thread")
         message.message.reply(str(random.random()))
+    if message.content.startswith('deleteme'):
+        print("Deleting message: deleteme")
+        message.delete()
 
 
 def setup_logging():
